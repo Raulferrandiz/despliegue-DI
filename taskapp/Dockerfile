@@ -24,7 +24,7 @@ FROM test AS build
 
 RUN npm run build
 
-FROM ngnix:stable-alpine AS production
+FROM nginx:stable-alpine AS production
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
