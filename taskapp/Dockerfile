@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN rpm install 
+RUN npm install 
 
 FROM base AS dev
 
